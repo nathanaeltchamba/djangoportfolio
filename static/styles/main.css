@@ -255,6 +255,73 @@ h6{font-size: 16px;}
     right:-5px;
 }
 
+.about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#skills {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+}
+
+#github{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#twitter{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#icon-1 {
+    margin-top: 15px;
+}
+
+#icon-2 {
+    margin-top: 15px;
+    color: rgb(12,102,194);
+}
+
+#icon-3 {
+    margin-top: 15px;
+    color: rgb(29,162,241);
+}
+.link1 {
+    color: black;
+}
+.link1:hover {
+    color: var(--secondaryText)
+}
+
+.link2 {
+    color: black;
+}
+.link2:hover {
+    color: var(--secondaryText)
+}
+
+.link3:hover {
+    color: var(--secondaryText)
+}
+
+.link3 {
+    color: black;
+}
+
+.social-links h4 {
+    text-align: center;
+}
+
+#linkedin{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 @media screen and (max-width:1200px){
     .main-container{
         width: 95%;
