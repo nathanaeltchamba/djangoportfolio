@@ -7,7 +7,15 @@
 <section class="s1">
     <div class="main-container">
         <div class="greeting-wrapper">
-            <h1>Hello, My name is Nate Tchamba</h1>
+            <h1 id="intro-title">Hello, My name is Nate Tchamba</h1>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    new TypeIt("#intro-title", {
+                        strings: [""],
+                    }).go();
+                });
+            </script>
+            <script src="{% static 'js/name.js' %}"></script>
         </div>
 
         <div class="intro-wrapper">
@@ -19,7 +27,7 @@
                 </div>
 
                 <ul id="navigation">
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
                 </ul>
             </div>
 
@@ -117,7 +125,7 @@
 
 <section class="s1">
     <div class="main-container">
-        <h3 style="text-align: center;">lets connect</h3>
+        <h3 id="contact-section" style="text-align: center;">lets connect</h3>
 
         <form id="contact-form" action="">
             <label>Name</label>
