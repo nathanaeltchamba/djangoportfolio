@@ -148,8 +148,8 @@ h6{font-size: 16px;}
 }
 
 #profile_pic {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
     border: 2px solid var(--borderColor);
     display: block;
@@ -291,6 +291,7 @@ h6{font-size: 16px;}
 
 #icon-1 {
     margin-top: 15px;
+    margin-left: 35px;
 }
 
 #icon-2 {
@@ -300,6 +301,7 @@ h6{font-size: 16px;}
 
 #icon-3 {
     margin-top: 15px;
+    margin-left: 25px;
     color: rgb(29,162,241);
 }
 .link1 {
@@ -324,8 +326,13 @@ h6{font-size: 16px;}
     color: black;
 }
 
+.social-links {
+    margin-top: 70px;
+}
+
 .social-links h4 {
     text-align: center;
+
 }
 
 #linkedin{
@@ -341,14 +348,14 @@ h6{font-size: 16px;}
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 50px;
-    background-color: var(--secondaryColor);
+    background-color: var(--mainColor);
 }
 
 .input-field {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: var(--mainColor);
+    background-color: var(--secondaryColor);
     border-radius: 5px;
     border: 1px solid var(--btnColor);
     font-size: 14px;
@@ -375,22 +382,85 @@ h6{font-size: 16px;}
     font-size: 14px;
 }
 
+.post-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.post{
+    border: 1px solid var(--borderColor);
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+.post-preview {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.post-title {
+    color: black;
+    margin: 0;
+    text-align: center;
+}
+
+.post-intro{
+    color: #4b5156;
+    font-size: 14px;
+}
+
+.thumbnail {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.link-btn {
+   color: black;
+   padding: 15px;
+   border: none;
+   border-radius: 8px solid;
+}
+
 @media screen and (max-width:1200px){
     .main-container{
         width: 95%;
     }
 }
 
-@media screen and (max-width:800px){
-        .intro-wrapper{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-            'nav-wrapper'
-            'left-column' 
-            'right-column'
-        ;
-    }
-    .right-column{
-        justify-content: center;
-    }
+@media screen and (max-width: 800px){
+	.intro-wrapper{
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			'nav-wrapper'
+			'left-column'
+			'right-column'
+		;
+	}
+
+	.right-column{
+		justify-content: center;
+	}
+
+}
+
+@media screen and (max-width: 400px){
+	#preview-shadow{
+		max-width: 280px;
+		height: 180px;
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+
+	#preview{
+		width: 280px;
+
+	}
+
 }

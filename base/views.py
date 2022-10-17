@@ -5,18 +5,27 @@ from django.http import FileResponse, Http404, HttpResponse
 
 def home(request):
     return render(request, "base/homepage.html")
-    
-def profile(request):
-    return render(request, "base/profile.html")
 
-def about(request):
-    return render(request, "base/about.html")
-
-def contact(request):
-    return render(request, "base/contact.html")
-
-def view_pdf(request):
+def view_resume(request):
     try:
         return FileResponse(open('resume.pdf', 'rb'), content_type='application/pdf')
+    except FileNotFoundError:
+        raise Http404()
+
+def view_crm(request):
+    try:
+        return FileResponse(open('crm.pdf', 'rb'), content_type='application/pdf')
+    except FileNotFoundError:
+        raise Http404()
+
+def view_discord(request):
+    try:
+        return FileResponse(open('discord_clone.pdf', 'rb'), content_type='application/pdf')
+    except FileNotFoundError:
+        raise Http404()
+
+def view_real_estate(request):
+    try:
+        return FileResponse(open('real_estate.pdf', 'rb'), content_type='application/pdf')
     except FileNotFoundError:
         raise Http404()

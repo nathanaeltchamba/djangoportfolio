@@ -1,7 +1,7 @@
 let theme = localStorage.getItem('theme')
 
 if (theme == null) {
-    setTheme('light')
+    setTheme('green')
 } else {
     setTheme(theme)
 }
@@ -18,19 +18,19 @@ for (var i = 0; themeDots.length > i; i++) {
 
 function setTheme(mode) {
     if (mode == 'light') {
-        document.getElementById('theme-styled').href = 'main.css'
+        document.getElementById('theme-styled').href = static + '/main.css'
     }
 
     if (mode == 'blue') {
-        document.getElementById('theme-styled').href = 'blue.css'
+        document.getElementById('theme-styled').href = static + '/blue.css'
     }
 
     if (mode == 'green') {
-        document.getElementById('theme-styled').href = 'green.css'
+        document.getElementById('theme-styled').href = static + '/green.css'
     }
 
     if (mode == 'purple') {
-        document.getElementById('theme-styled').href = 'purple.css'
+        document.getElementById('theme-styled').href = static + '/purple.css'
     }
 
     localStorage.setItem('theme', mode)
