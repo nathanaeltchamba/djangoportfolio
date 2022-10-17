@@ -7,4 +7,6 @@ urlpatterns = [
     path('view-crm/', views.view_crm, name="crm"),
     path('view-discord/', views.view_discord, name="discord"),
     path('view-realestate/', views.view_real_estate, name="realestate"),
+
+    path('send_email', views.sendEmail, name='send-email'),
 ]

@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <style>
+        html,body {
+            height: 100%;
+        }
+    </style>
+  
+    <div id="page-wrapper">
+        <div id="success-box" class="content-block">
+            <h1 id="thankyou">Thanks for Reaching out!</h1>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    new TypeIt("#thankyou", {
+                        strings: [""],
+                    }).go();
+                });
+            </script>
+            <p>your message was sent succesfully. I will do my best to get back to you in a timely manner!</p>
+            <a href="{% url 'home' %}" id="back-btn" class="btn btn-success">Back to Home page</a>
+        </div>
+    </div>
+
+{% endblock content %}

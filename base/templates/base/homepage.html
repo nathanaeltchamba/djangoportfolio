@@ -33,7 +33,7 @@
             </div>
 
             <div class="left-column">
-                <img id="profile_pic" src="{% static 'images/animated.jpg' %}" height="300px" width="300px"
+                <img id="profile_pic" src="{% static 'images/profile_pic.jpg' %}" height="300px" width="300px"
                     alt="profile image">
                 <h5>Personalize Theme</h5>
 
@@ -114,17 +114,16 @@
                     <i id="icon-1" class="fa-brands fa-github fa-3x"></i>
                 </div>
 
+                <div id="twitter">
+                    <h3><a target="_blank" class="link3" href="https://twitter.com/deNate42">Twitter</a></h3>
+                    <i id="icon-3" class="fa-brands fa-twitter fa-3x"></i>
+                </div>
+                
                 <div id="linkedin">
                     <h3><a target="_blank" class="link2" href="https://www.linkedin.com/in/nate-tchamba/">LinkedIn</a>
                     </h3>
                     <i id="icon-2" class="fa-brands fa-linkedin fa-3x"></i>
                 </div>
-
-                <div id="twitter">
-                    <h3><a target="_blank" class="link3" href="https://twitter.com/deNate42">Twitter</a></h3>
-                    <i id="icon-3" class="fa-brands fa-twitter fa-3x"></i>
-                </div>
-
             </div>
         </div>
 
@@ -185,7 +184,7 @@
     <div class="main-container">
         <h3 id="contact-section" style="text-align: center;">lets connect</h3>
 
-        <form id="contact-form" method="POST">
+        <form id="contact-form" method="POST" action="{% url 'send-email' %}">
             {% csrf_token %}
             <label>Name</label>
             <input class="input-field" type="text" name="name">
